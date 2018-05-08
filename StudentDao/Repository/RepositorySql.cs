@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
 using StudentCommon.Logic.Log;
 using StudentCommon.Logic.Model;
 using StudentDao.DataBaseContext;
@@ -101,5 +102,6 @@ namespace StudentDao.Repository
             }
            
         }
+
     }
 }

@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentDao", "StudentDao\StudentDao.csproj", "{F8B1E4B9-289D-4E63-9175-93FFE19ED8C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentDao", "StudentDao\StudentDao.csproj", "{F8B1E4B9-289D-4E63-9175-93FFE19ED8C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentCommon.Logic", "StudentCommon.Logic\StudentCommon.Logic.csproj", "{8318CEB3-367F-4516-A667-9AFC76C58753}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentCommon.Logic", "StudentCommon.Logic\StudentCommon.Logic.csproj", "{8318CEB3-367F-4516-A667-9AFC76C58753}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Student.Business.Logic", "Student.Business.Logic\Student.Business.Logic.csproj", "{7DDB4C77-2C30-48D4-8478-989735F23397}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Student.Business.Logic", "Student.Business.Logic\Student.Business.Logic.csproj", "{7DDB4C77-2C30-48D4-8478-989735F23397}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Student.Facade.Logic", "Student.Facade.Logic\Student.Facade.Logic.csproj", "{104DD56B-B29D-42CE-A0AB-D0A08E9F08B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Student.Facade.Logic", "Student.Facade.Logic\Student.Facade.Logic.csproj", "{104DD56B-B29D-42CE-A0AB-D0A08E9F08B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryTest", "RepositoryTest\RepositoryTest.csproj", "{E41492F3-C72F-4007-A402-9413C3D2A6DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{104DD56B-B29D-42CE-A0AB-D0A08E9F08B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{104DD56B-B29D-42CE-A0AB-D0A08E9F08B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{104DD56B-B29D-42CE-A0AB-D0A08E9F08B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E41492F3-C72F-4007-A402-9413C3D2A6DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E41492F3-C72F-4007-A402-9413C3D2A6DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E41492F3-C72F-4007-A402-9413C3D2A6DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E41492F3-C72F-4007-A402-9413C3D2A6DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

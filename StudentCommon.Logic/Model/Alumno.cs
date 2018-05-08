@@ -40,6 +40,16 @@ namespace StudentCommon.Logic.Model
             this.Nacimiento = nacimiento;
             this.Registro = registro;
         }
+        public Alumno(Guid guid,  string dni, string nombre, string apellidos, int edad, DateTime nacimiento, DateTime registro)
+        {
+            this.Guid = guid;
+            this.Dni = dni;
+            this.Nombre = nombre;
+            this.Apellidos = apellidos;
+            this.Edad = edad;
+            this.Nacimiento = nacimiento;
+            this.Registro = registro;
+        }
         #endregion
 
         #region ToStrings
