@@ -11,13 +11,17 @@ namespace RepositoryTest
     [TestClass]
     public class DaoTest
     {
-        private readonly RepositorySql repositrory;
+        private  RepositorySql repositrory;
     
         public DaoTest()
         {
+            
+        }
+        [TestInitialize]
+        public void Init()
+        {
             this.repositrory = new RepositorySql(new Log4netAdapter(), new AlumnoContext());
         }
-
 
         public static IEnumerable<object[]> StudentData()
         {
@@ -33,6 +37,27 @@ namespace RepositoryTest
 
             Assert.IsTrue(alumno.Equals(alumno_devuelto));
             Assert.IsTrue(alumno.Id > 0);
+
+        }
+
+       
+        [DataTestMethod]
+        [DynamicData(nameof(StudentData), DynamicDataSourceType.Method)]
+        public void GetAllTest(Alumno alumno)
+        {
+            repositrory.Create(alumno);
+            repositrory = new RepositorySql(new Log4netAdapter(), new AlumnoContext());
+            var alumnos = repositrory.GetAll();
+
+            Assert.IsTrue(alumnos.Count>0);
+            
+        }
+
+        [TestCleanup]
+        public void Exit()
+        {
+            repositrory = new RepositorySql(new Log4netAdapter(), new AlumnoContext());
+            repositrory.DeleteAll();
         }
 
     

@@ -28,7 +28,7 @@ namespace StudentDao.Repository
                 {
                     ctxAlumno.Alumnos.Add(entity);
                     ctxAlumno.SaveChanges();
-                    return SelectById(entity.Id);
+                    return entity;
                 }
                
             }
@@ -68,12 +68,7 @@ namespace StudentDao.Repository
 
                 using (var ctxAlumno = this.context)
                 {
-                    var result = new List<Alumno>();
-                    foreach (var student in ctxAlumno.Alumnos)
-                    {
-                        result.Add(student);
-                    }
-                    return result;
+                    return ctxAlumno.Alumnos.ToList();
                 }
             }
             catch (Exception ex )
@@ -103,5 +98,13 @@ namespace StudentDao.Repository
            
         }
 
+        public int DeleteAll()
+        {
+            using (var ctxAlumno = this.context)
+            {
+                return ctxAlumno.Database.ExecuteSqlCommand("TRUNCATE TABLE [Alumnos]");
+            }
+            
+        }
     }
 }
