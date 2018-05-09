@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 
+
 namespace Student.SeleniumTest
 {
     [TestClass]
@@ -23,6 +24,7 @@ namespace Student.SeleniumTest
         {
             firefox.Url = "http://localhost:60421/api/Alumno";
             chrome.Url = "http://localhost:60421/api/Alumno";
+           
         }
       
     }
