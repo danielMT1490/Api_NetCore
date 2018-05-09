@@ -21,8 +21,8 @@ namespace Student.SeleniumTest
         [TestMethod]
         public void ChromeTest()
         {
-            firefox.Url = "http://www.google.com";
-            chrome.Url = "http://www.google.com";
+            firefox.Url = "http://localhost:60421/api/Alumno";
+            chrome.Url = "http://localhost:60421/api/Alumno";
         }
       
     }
