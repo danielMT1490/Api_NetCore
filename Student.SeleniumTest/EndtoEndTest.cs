@@ -20,12 +20,13 @@ namespace Student.SeleniumTest
         }
 
         [TestMethod]
-        public void ChromeTest()
+        public void EndToEndTest()
         {
-            firefox.Url = "http://localhost:60421/api/Alumno";
+           
             chrome.Url = "http://localhost:60421/api/Alumno";
-            
+            firefox.Url = "http://localhost:60421/api/Alumno";
         }
+    
 
         [TestCleanup]
         public void Exit()

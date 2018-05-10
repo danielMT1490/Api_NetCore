@@ -11,12 +11,9 @@ namespace RepositoryTest
     [TestClass]
     public class DaoTest
     {
-        private  RepositorySql repositrory;
-    
-        public DaoTest()
-        {
-            
-        }
+        private  IRepository repositrory;
+       
+
         [TestInitialize]
         public void Init()
         {

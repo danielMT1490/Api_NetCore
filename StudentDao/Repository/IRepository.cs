@@ -11,5 +11,6 @@ namespace StudentDao.Repository
         List<Alumno> GetAll();
         Alumno SelectById(int id);
         void Delete(int id);
+        int DeleteAll();
     }
 }
