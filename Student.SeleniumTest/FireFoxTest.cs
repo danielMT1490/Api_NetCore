@@ -26,7 +26,9 @@ namespace Student.SeleniumTest
         public void FireFoxNavegatorTest()
         {
             var url = "http://localhost:60421/api/Alumno";
+            
             firefox.Navigate().GoToUrl(url);
+            firefox.FindElement(By.Id("tab-1")).Click();
             var responseElement = firefox.FindElement(By.TagName("pre"));
             var resultJson = responseElement.Text;
 
@@ -46,7 +48,7 @@ namespace Student.SeleniumTest
         [TestCleanup]
         public void Exit()
         {
-            firefox.Quit();
+            //firefox.Quit();
         }
     }
 }
