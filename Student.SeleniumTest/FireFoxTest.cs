@@ -48,7 +48,7 @@ namespace Student.SeleniumTest
         [TestCleanup]
         public void Exit()
         {
-            //firefox.Quit();
+            firefox.Quit();
         }
     }
 }

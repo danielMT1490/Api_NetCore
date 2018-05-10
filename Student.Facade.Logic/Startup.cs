@@ -13,6 +13,7 @@ using StudentDao.DataBaseContext;
 using StudentDao.Repository;
 using Microsoft.EntityFrameworkCore;
 using Student.Business.Logic;
+using System.Net.Http.Headers;
 
 namespace Student.Facade.Logic
 {
@@ -36,7 +37,15 @@ namespace Student.Facade.Logic
 
             services.AddTransient<IBusiness, StudentBL>();
 
-            services.AddMvc();
+            services.AddMvc(options =>
+            {
+                options.FormatterMappings.SetMediaTypeMappingForFormat
+                ("xml", Microsoft.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/xml"));
+                options.FormatterMappings.SetMediaTypeMappingForFormat
+                ("json", Microsoft.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json"));
+            })
+            .AddXmlSerializerFormatters();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

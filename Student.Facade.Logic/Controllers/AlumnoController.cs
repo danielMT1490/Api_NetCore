@@ -9,7 +9,7 @@ using StudentCommon.Logic.Model;
 
 namespace Student.Facade.Logic.Controllers
 {
-    [Route("api/[controller]")]
+    //[Route("api/[controller]")]
     public class AlumnoController : Controller
     {
         private readonly ILogger Log;
@@ -22,7 +22,7 @@ namespace Student.Facade.Logic.Controllers
         }
 
         // GET api/Alumno
-        [HttpGet]
+        [HttpGet("api/Alumno.{format}"),FormatFilter]
         public IActionResult GetAll()
         {
             return Ok(studentBL.GetAll());
