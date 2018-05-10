@@ -8,8 +8,8 @@
     }
   },
   "profiles": {
-    "IIS Express": {
-      "commandName": "IISExpress",
+    "Kestrel Debug": {
+      "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/Alumno",
       "environmentVariables": {
