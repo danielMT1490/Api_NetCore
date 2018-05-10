@@ -102,6 +102,7 @@ namespace StudentDao.Repository
         {
             using (var ctxAlumno = this.context)
             {
+                //ejecuta sentencias sql con entity frameworck
                 return ctxAlumno.Database.ExecuteSqlCommand("TRUNCATE TABLE [Alumnos]");
             }
             

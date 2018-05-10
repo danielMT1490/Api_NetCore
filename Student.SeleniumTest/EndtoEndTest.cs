@@ -24,7 +24,14 @@ namespace Student.SeleniumTest
         {
             firefox.Url = "http://localhost:60421/api/Alumno";
             chrome.Url = "http://localhost:60421/api/Alumno";
-           
+            
+        }
+
+        [TestCleanup]
+        public void Exit()
+        {
+            firefox.Quit();
+            chrome.Quit();
         }
       
     }
